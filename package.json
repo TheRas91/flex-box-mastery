@@ -1,0 +1,16 @@
+{
+  "name": "flex-box-mastery",
+  "version": "1.0.0",
+  "description": "Advance CSS/SASS training",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "dev": "live-server"
+  },
+  "author": "Ras",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0"
+  }
+}
