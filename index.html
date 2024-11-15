@@ -13,13 +13,48 @@
     <title>SASS/CSS&mdash;Booking App</title>
   </head>
   <body>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente minima
-      tenetur ipsam placeat, iste obcaecati debitis. Repellat beatae odio
-      officiis iste, fugit Lorem ipsum dolor, sit amet consectetur adipisicing
-      elit. Iste est ipsam repellat debitis explicabo eaque, cupiditate ullam
-      quod cumque aliquid quas qui. Quod labore iure impedit quam animi rem
-      facere.adipisci numquam quis voluptate! Consequatur hic sunt sapiente?
-    </p>
+    <div class="container">
+      <header class="header">
+        <img src="./img/Ras-1.png" alt="ras-logo" class="logo" />
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use href="./img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="user-nav">
+          <div class="user-vav__icon-box">
+            <svg class="user-nav__icon">
+              <use href="./img/sprite.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">7</span>
+          </div>
+          <div class="user-vav__icon-box">
+            <svg class="user-nav__icon">
+              <use href="./img/sprite.svg#icon-chat"></use>
+            </svg>
+            <span class="user-nav__notification">13</span>
+          </div>
+          <div class="user-nav__user">
+            <img
+              src="./img/Ras-1.png"
+              alt="user photo"
+              class="user-nav__user-photo"
+            />
+            <span class="user-nav__user-name">TheRas91</span>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <nav class="sidebar">Navigation</nav>
+        <main class="hotel-view">Hotel View</main>
+      </div>
+    </div>
   </body>
 </html>
