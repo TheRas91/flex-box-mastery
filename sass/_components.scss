@@ -142,8 +142,6 @@
 
 ////////////////////////
 /// side nav
-.sidebar {
-}
 
 .side-nav {
   font-size: 1.4rem;
@@ -209,8 +207,16 @@
   text-align: center;
   hyphens: auto;
   padding: 2.5rem;
-}
 
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.legal:hover {
+  color: var(--color-primary);
+  font-weight: bold;
+}
 ////////////////////////
 /// gallery
 .gallery {
@@ -299,9 +305,13 @@
   transition: all 0.2s;
 
   &:hover {
-    color: var(--color-gray-dark-1);
     animation: zoomLink 0.5s infinite linear;
     transition: all 1s;
+  }
+
+  &:hover &__arrow {
+    margin-left: 0.5rem;
+    transition: margin 0.2s;
   }
 
   &:focus {
@@ -316,8 +326,7 @@
   }
   50% {
     transform: scale(1.01);
-    color: rgb(138, 43, 226);
-    box-shadow: 0 0.3rem 0.3rem rgba(255, 57, 57, 0.3);
+    box-shadow: 0 0.3rem rgba(255, 57, 57, 0.3);
   }
   100% {
     transform: scale(1);
@@ -390,5 +399,82 @@
     &:not(:last-child) {
       margin-right: -1.7rem;
     }
+  }
+}
+
+////////////////////////
+/// Reviews
+.user-reviews {
+}
+
+.review {
+  background-color: #fff;
+  box-shadow: 0 0 5rem rgba(255, 69, 69, 0.2);
+  border-radius: 0.2rem;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+  position: relative;
+
+  &:hover::before {
+    color: var(--color-gray-light-4);
+    transform: rotate(10deg);
+    text-shadow: 1px 1px 10rem var(--color-primary);
+    transition: all 1s;
+  }
+
+  &::before {
+    font-family: sans-serif;
+    // html entity &ldquo;
+    content: "\201C";
+    font-size: 20rem;
+    line-height: 1;
+    position: absolute;
+    top: -2.5rem;
+    left: -1rem;
+    color: var(--color-gray-light-3);
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 2rem;
+    z-index: 10;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__user-box {
+    // margin-right: auto;
+    //or
+    flex: 1;
+  }
+
+  &__user-name {
+    color: var(--color-gray-dark-2);
+    font-weight: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  &__user-date {
+    font-size: 1rem;
+    color: var(--color-gray-dark-3);
+  }
+
+  &__rating {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    font-weight: 300;
   }
 }

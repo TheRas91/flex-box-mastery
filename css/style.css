@@ -71,13 +71,13 @@ body {
   flex-grow: 1; }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4rem;
   background-color: var(--color-gray-light-1);
   border-bottom: 1px solid var(--color-gray-light-2); }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: 0 0 5rem rgba(255, 69, 69, 0.2);
   border-radius: 0.2rem;
@@ -87,9 +87,9 @@ body {
 
 .user-reviews {
   flex: 1;
-  background-color: #fff;
-  box-shadow: 0 0 5rem rgba(255, 69, 69, 0.2);
-  border-radius: 0.2rem; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .logo {
   height: 5rem;
@@ -226,6 +226,13 @@ body {
   text-align: center;
   hyphens: auto;
   padding: 2.5rem; }
+  .legal__icon {
+    width: 3rem;
+    height: 3rem; }
+
+.legal:hover {
+  color: var(--color-primary);
+  font-weight: bold; }
 
 .gallery {
   display: flex; }
@@ -282,9 +289,11 @@ body {
   cursor: pointer;
   transition: all 0.2s; }
   .btn-inline:hover {
-    color: var(--color-gray-dark-1);
     animation: zoomLink 0.5s infinite linear;
     transition: all 1s; }
+  .btn-inline:hover .btn-inline__arrow {
+    margin-left: 0.5rem;
+    transition: margin 0.2s; }
   .btn-inline:focus {
     outline: none; }
 
@@ -294,8 +303,7 @@ body {
     box-shadow: none; }
   50% {
     transform: scale(1.01);
-    color: blueviolet;
-    box-shadow: 0 0.3rem 0.3rem rgba(255, 57, 57, 0.3); }
+    box-shadow: 0 0.3rem rgba(255, 57, 57, 0.3); }
   100% {
     transform: scale(1);
     box-shadow: none; } }
@@ -342,3 +350,53 @@ body {
     border: 3px solid #fff; }
     .recommend__photo:not(:last-child) {
       margin-right: -1.7rem; }
+
+.review {
+  background-color: #fff;
+  box-shadow: 0 0 5rem rgba(255, 69, 69, 0.2);
+  border-radius: 0.2rem;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+  position: relative; }
+  .review:hover::before {
+    color: var(--color-gray-light-4);
+    transform: rotate(10deg);
+    text-shadow: 1px 1px 10rem var(--color-primary);
+    transition: all 1s; }
+  .review::before {
+    font-family: sans-serif;
+    content: "\201C";
+    font-size: 20rem;
+    line-height: 1;
+    position: absolute;
+    top: -2.5rem;
+    left: -1rem;
+    color: var(--color-gray-light-3); }
+  .review__text {
+    position: relative;
+    margin-bottom: 2rem;
+    z-index: 10; }
+  .review__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .review__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1rem; }
+  .review__user-box {
+    flex: 1; }
+  .review__user-name {
+    color: var(--color-gray-dark-2);
+    font-weight: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem; }
+  .review__user-date {
+    font-size: 1rem;
+    color: var(--color-gray-dark-3); }
+  .review__rating {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    font-weight: 300; }
