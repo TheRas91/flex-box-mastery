@@ -1,4 +1,5 @@
-////////////logo
+////////////////////////
+/// logo
 .logo {
   height: 5rem;
   border-radius: 100rem;
@@ -13,7 +14,7 @@
 }
 
 @keyframes rotation {
-  0 {
+  0% {
     transform: rotate(0deg);
   }
   100% {
@@ -21,7 +22,8 @@
   }
 }
 
-////////////search bar
+////////////////////////
+/// search bar
 .search {
   display: flex;
   justify-content: center;
@@ -78,7 +80,8 @@
   }
 }
 
-////////////user navigation
+////////////////////////
+/// user navigation
 .user-nav {
   display: flex;
   align-items: center;
@@ -137,7 +140,8 @@
   }
 }
 
-////////////side nav
+////////////////////////
+/// side nav
 .sidebar {
 }
 
@@ -205,4 +209,118 @@
   text-align: center;
   hyphens: auto;
   padding: 2.5rem;
+}
+
+////////////////////////
+/// gallery
+.gallery {
+  display: flex;
+  &__item {
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+////////////////////////
+/// search bar
+.overview {
+  border-bottom: 1px solid var(--color-gray-light-2);
+  display: flex;
+  align-items: center;
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    // flex: 1;
+    //pretty handy trick, make the element all the way left with a fit size, if flex:1; uses then we have the same but with a total free space background
+    margin-right: auto;
+    display: flex;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--color-primary);
+  }
+
+  &__icon-location {
+    margin-right: 0.3rem;
+  }
+
+  &__location {
+    display: flex;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2.3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-average {
+      font-size: 2.25rem;
+      font-weight: 300;
+    }
+
+    &-count {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+////////////////////////
+/// Button inline
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  background-color: transparent;
+  padding-bottom: 2px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--color-gray-dark-1);
+    animation: zoomLink 0.5s infinite linear;
+    transition: all 1s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@keyframes zoomLink {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.01);
+    color: rgb(138, 43, 226);
+    box-shadow: 0 0.3rem 0.3rem rgba(255, 57, 57, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }
