@@ -478,3 +478,79 @@
     font-weight: 300;
   }
 }
+
+////////////////////////
+/// cta
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+
+////////////////////////
+/// btn
+.btn {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100rem;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  position: relative;
+  overflow: hidden;
+
+  & > * {
+    transition: all 0.3s;
+    //h and w is for fitting the spam for button
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      var(--color-primary-light) 70%,
+      var(--color-primary-dark)
+    );
+  }
+
+  &__visible {
+    display: inline-block;
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    display: inline-block;
+    position: absolute;
+    padding: 2rem 0;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus {
+    outline: none;
+    animation: zoomLink 0.5s infinite linear;
+  }
+}
