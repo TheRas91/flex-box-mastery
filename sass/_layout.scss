@@ -10,8 +10,13 @@
   box-shadow: var(--shadow-dark);
   overflow: hidden;
   border-radius: 0.5rem;
-
   min-height: 50rem;
+
+  @media (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+  }
 }
 
 .header {
@@ -25,6 +30,10 @@
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -51,6 +60,10 @@
   padding: 4rem;
   background-color: var(--color-gray-light-1);
   border-bottom: 1px solid var(--color-gray-light-2);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
 }
 
 .description {
@@ -60,6 +73,11 @@
   flex: 0 0 60%;
   margin-right: 4rem;
   padding: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
 }
 
 .user-reviews {

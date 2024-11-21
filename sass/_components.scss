@@ -148,10 +148,25 @@
   margin-top: 3.5rem;
   list-style: none;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -191,6 +206,10 @@
     //z-index works if a position initialized for the element
     position: relative;
     z-index: 10;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
   }
 
   &__icon {
@@ -207,6 +226,10 @@
   text-align: center;
   hyphens: auto;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 
   &__icon {
     width: 3rem;
@@ -388,6 +411,7 @@
   justify-content: space-between;
 
   &__friends {
+    display: flex;
   }
 
   &__photo {
@@ -415,6 +439,11 @@
   margin-bottom: 3.5rem;
   overflow: hidden;
   position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+    margin-bottom: 3rem;
+  }
 
   &:hover::before {
     color: var(--color-gray-light-4);

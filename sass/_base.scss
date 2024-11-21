@@ -15,6 +15,11 @@
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
+//screen size variables (we cant do this like root colors and use it in queries) so use sass vars
+$bp-largest: 78.125em; //1250px/16px=78.125em
+$bp-large: 68.125em; //1090px/16px=68.125em
+$bp-medium: 55.625em; //890px/16px=55.625em
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +35,10 @@ html {
   box-sizing: border-box;
   //1rem is 16px by def, make it 10px (10/16 = ?/100)=62.5%
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
